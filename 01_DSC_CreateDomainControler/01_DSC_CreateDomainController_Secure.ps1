@@ -181,9 +181,9 @@ Begin{
                 DomainName = $node.DomainName
                 Path = "ou=Users,ou=D2C,$($node.DomainDN)"
                 UserName = 'Adminmw'
-                GivenName = 'Mark'
-                Surname = 'van de Waarsenburg'
-                DisplayName = 'Mark van de Waarsenburg'
+                GivenName = 'Matthew'
+                Surname = 'Water'
+                DisplayName = 'Matthew Water'
                 Enabled = $true
                 Password = $domaincred
                 DomainAdministratorCredential = $domainCred
@@ -194,9 +194,9 @@ Begin{
                 DomainName = $node.DomainName
                 Path = "ou=Users,ou=D2C,$($node.DomainDN)"
                 UserName = 'AdminJM'
-                GivenName = 'Jean-Marc'
-                Surname = 'Zohlandt'
-                DisplayName = 'Jean-Marc Zohlandt'
+                GivenName = 'John'
+                Surname = 'Zoo'
+                DisplayName = 'John Zoo'
                 Enabled = $true
                 Password = $domaincred
                 DomainAdministratorCredential = $domainCred
@@ -206,10 +206,10 @@ Begin{
             xADUser AdminDH {
                 DomainName = $node.DomainName
                 Path = "ou=Users,ou=D2C,$($node.DomainDN)"
-                UserName = 'AdminDH'
+                UserName = 'AdminMH'
                 GivenName = 'Donna'
-                Surname = 'Danny'
-                DisplayName = 'Hoeke'
+                Surname = 'Ho'
+                DisplayName = 'Donna Ho'
                 Enabled = $true
                 Password = $domaincred
                 DomainAdministratorCredential = $domainCred
@@ -220,9 +220,9 @@ Begin{
                 DomainName = $node.DomainName
                 Path = "OU=Users,OU=D2C,$($node.DomainDN)"
                 UserName = 'AdminMH'
-                GivenName = 'Martijn'
-                Surname = 'Haverhoek'
-                DisplayName = 'Martijn Haverhoek'
+                GivenName = 'Monica'
+                Surname = 'Beverly'
+                DisplayName = 'Monica Beverly'
                 Enabled = $true
                 Password = $domaincred
                 DomainAdministratorCredential = $domainCred
