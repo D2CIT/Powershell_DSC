@@ -18,12 +18,12 @@
 
 <#
 .Synopsis
-   Prepare Server For DSC Config and start DSC
+    Prepare Server For DSC Config and start DSC
 .DESCRIPTION
-   Long description
+    Long description
 .EXAMPLE
-   Prepare and rename Host
-   .\00_DSC_Prepare_Host.ps1 -newname LABDC01
+    Prepare and rename Host
+    .\00_DSC_Prepare_Host.ps1 -newname LABDC01
 #>
 
 
@@ -35,7 +35,7 @@ Param(
     #Param 2 : only use when tyou want to rename your host. Host wil reboot automaticly
     [Parameter(Mandatory=$false)]      
     [String]$NewName ,  
-     #Param 3 :  If you als want install devoptools lile Git,Visualcode etc. 
+    #Param 3 :  If you als want install devoptools lile Git,Visualcode etc. 
     [Parameter(Mandatory=$false)]  
     [switch]$IncludeDevOPTools 
 )
@@ -45,7 +45,7 @@ Begin{
     Function prep-DSCforHost       {
 
         Param($scriptfolder)
- 
+
         # CREATE LOCAL SCRIPT FOLDER      
             If(!(test-path $scriptfolder)){mkdir $scriptfolder | out-null}
             If(!(test-path $scriptfolder\Powershell)){mkdir $scriptfolder\Powershell | out-null}
@@ -75,7 +75,7 @@ Begin{
                 write-host "         - Module $module " -for Yellow
                 Install-Module -Name $Module 
             }
-      
+
     } #End Function
 
 }
