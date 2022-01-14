@@ -18,13 +18,13 @@
 ################################################################################
 <#
 .Synopsis
-   Create domaincontroller via DSC
+    Create domaincontroller via DSC
 .DESCRIPTION
-   Create domaincontroller via DSC
+    Create domaincontroller via DSC
 .EXAMPLE
-   Example of how to use this cmdlet
+    Example of how to use this cmdlet
 .Note
-   Last Edit : 26-09-2018
+    Last Edit : 26-09-2018
 #>
 Param(
 
@@ -54,7 +54,7 @@ Param(
     
     [Parameter(Mandatory=$false)]
     [string]$DomainDN          = "DC=d2cit,DC=it" , 
-      
+
     [Parameter(Mandatory=$false)]
     [string]$scriptfolder      = "c:\Scripts", 
     
@@ -290,7 +290,7 @@ Begin{
                 rebootNodeIfNeeded             = $true
             }
         }
-     } #End PushedConfig
+    } #End PushedConfig
 
     # CREATE LOCAL SELFSIGNEDCERTIFICATE    
     if( !(test-path "$scriptfolder\Powershell\Cert\DscPublickey.cer") -or $ForceCreateSelfSignedCertificate){
@@ -345,7 +345,7 @@ Process {
 
     # Build MOF File
     BuildDomainController -ConfigurationData $ConfigDataSecure
-   
+
     # Set LCM Manager
     Set-DscLocalConfigurationManager -path lcmconfigSecure -verbose
 
